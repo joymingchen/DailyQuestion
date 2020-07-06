@@ -3,8 +3,8 @@ package com.joyming;
 public class Main {
 
     public static void main(String[] args) {
-        String str = "abcabcbc";
+        String[] str = {"flower","flow","flight"};
 
-        System.out.println(Question3.lengthOfLongestSubstring(str));
+        System.out.println(Question14.longestCommonPrefix3(str));
     }
 }
