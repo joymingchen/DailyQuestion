@@ -4,23 +4,39 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Given a string, find the length of the longest substring without repeating characters.
+ *
+ * Example 1:
+ *
+ * Input: "abcabcbb"
+ * Output: 3
+ * Explanation: The answer is "abc", with the length of 3.
+ * Example 2:
+ *
+ * Input: "bbbbb"
+ * Output: 1
+ * Explanation: The answer is "b", with the length of 1.
+ * Example 3:
+ *
+ * Input: "pwwkew"
+ * Output: 3
+ * Explanation: The answer is "wke", with the length of 3.
+ *              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ */
 public class Question3 {
 
     /**
-     * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度 (longest-substring-without-repeating-characters)
-     * <p>
-     * 输入: "abcabcbb"
-     * 输出: 3
-     * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
      * <p>
      * 利用滑动窗口降低时间复杂度
      * 双循环变单循环
      * 解决数组/字符串的子串的极值问题
      * <p>
      * 时间复杂度 O(n)
-     *
-     * @param s
-     * @return
      */
     public static int lengthOfLongestSubstring(String s) {
         int length = s.length();
@@ -49,9 +65,6 @@ public class Question3 {
      * 暴力算法
      * brute force attack
      * 把所有的子串列举出来，进行对比，记录下最长的
-     *
-     * @param s
-     * @return
      */
     public static int lengthOfLongestSubstringUseBruteForceAttack(String s) {
         int length = s.length();
