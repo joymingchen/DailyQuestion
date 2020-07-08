@@ -3,8 +3,8 @@ package com.joyming;
 public class Main {
 
     public static void main(String[] args) {
-        String[] str = {"flower","flow","flight"};
+        int[] str = {3,3};
 
-        System.out.println(Question14.longestCommonPrefix3(str));
+        System.out.println(new Question1().twoSum3(str,6));
     }
 }
