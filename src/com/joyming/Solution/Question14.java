@@ -1,4 +1,4 @@
-package com.joyming;
+package com.joyming.Solution;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

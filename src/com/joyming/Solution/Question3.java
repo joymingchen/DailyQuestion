@@ -1,4 +1,4 @@
-package com.joyming;
+package com.joyming.Solution;
 
 import java.util.ArrayList;
 import java.util.HashMap;

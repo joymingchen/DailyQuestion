@@ -1,22 +1,26 @@
 package com.joyming;
 
+import com.joyming.Solution.Question206;
+import com.joyming.data.ListNode;
+
 public class Main {
 
     public static void main(String[] args) {
-        Question2.ListNode listNode = new Question2.ListNode(2);
-        listNode.next = new Question2.ListNode(4);
-        listNode.next.next = new Question2.ListNode(3);
+        ListNode listNode = new ListNode(1);
+        listNode.next = new ListNode(2);
+        listNode.next.next = new ListNode(3);
+        listNode.next.next.next = new ListNode(4);
+        listNode.next.next.next.next = new ListNode(5);
 
-        Question2.ListNode listNode2 = new Question2.ListNode(5);
-        listNode2.next = new Question2.ListNode(6);
-        listNode2.next.next = new Question2.ListNode(4);
-
-        Question2.ListNode newList = new Question2().addTwoNumbersReverse(listNode,listNode2);
+        ListNode newList = new Question206().reverseList2(listNode);
 
         while (newList != null) {
             System.out.print(newList.val);
-
             newList = newList.next;
+
+            if(newList != null){
+                System.out.print(" --> ");
+            }
         }
     }
 }

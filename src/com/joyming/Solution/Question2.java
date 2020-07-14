@@ -1,6 +1,6 @@
-package com.joyming;
+package com.joyming.Solution;
 
-import java.text.NumberFormat;
+import com.joyming.data.ListNode;
 
 /**
  * 2. 两数相加
@@ -119,14 +119,5 @@ public class Question2 {
         }
 
         return listNode.next;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }
