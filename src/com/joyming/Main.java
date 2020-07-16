@@ -1,26 +1,30 @@
 package com.joyming;
 
 import com.joyming.Solution.Question206;
+import com.joyming.Solution.Question5;
 import com.joyming.data.ListNode;
 
 public class Main {
 
     public static void main(String[] args) {
-        ListNode listNode = new ListNode(1);
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(3);
-        listNode.next.next.next = new ListNode(4);
-        listNode.next.next.next.next = new ListNode(5);
+//        ListNode listNode = new ListNode(1);
+//        listNode.next = new ListNode(2);
+//        listNode.next.next = new ListNode(3);
+//        listNode.next.next.next = new ListNode(4);
+//        listNode.next.next.next.next = new ListNode(5);
+//
+//        ListNode newList = new Question206().reverseList2(listNode);
 
-        ListNode newList = new Question206().reverseList2(listNode);
+//        while (newList != null) {
+//            System.out.print(newList.val);
+//            newList = newList.next;
+//
+//            if(newList != null){
+//                System.out.print(" --> ");
+//            }
+//        }
 
-        while (newList != null) {
-            System.out.print(newList.val);
-            newList = newList.next;
+        System.out.print(new Question5().longestPalindrome2("cbbd"));
 
-            if(newList != null){
-                System.out.print(" --> ");
-            }
-        }
     }
 }
