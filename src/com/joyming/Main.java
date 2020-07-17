@@ -7,6 +7,8 @@ import com.joyming.data.ListNode;
 public class Main {
 
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
+
 //        ListNode listNode = new ListNode(1);
 //        listNode.next = new ListNode(2);
 //        listNode.next.next = new ListNode(3);
@@ -24,7 +26,10 @@ public class Main {
 //            }
 //        }
 
-        System.out.print(new Question5().longestPalindrome2("cbbd"));
 
+        System.out.print(new Question5().longestPalindrome3("aaaa"));
+
+        long endTime = System.currentTimeMillis();
+        System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
     }
 }

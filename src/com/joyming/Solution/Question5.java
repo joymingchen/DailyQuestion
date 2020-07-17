@@ -5,12 +5,11 @@ package com.joyming.Solution;
  * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
  * <p>
  * 示例 1：
- * <p>
  * 输入: "babad"
  * 输出: "bab"
  * 注意: "aba" 也是一个有效答案。
- * 示例 2：
  * <p>
+ * 示例 2：
  * 输入: "cbbd"
  * 输出: "bb"
  * <p>
@@ -28,26 +27,25 @@ public class Question5 {
      * 空间复杂度：O(1)
      */
     public String longestPalindrome(String s) {
-        if (s == null || s.length() == 1) {
+        if (s == null || s.length() < 2) {
             return s;
         }
 
-        String answer = "";
+        int begin = 0;
+        int length = 1;
 
         for (int i = 0; i < s.length(); i++) {
-            for (int j = i + 1; j <= s.length(); j++) {
-                String current = s.substring(i, j);
+            for (int j = i + 1; j < s.length(); j++) {
 
                 //符合回文
-                if (isPalindrome(current)) {
-                    if (current.length() > answer.length()) {
-                        answer = current;
-                    }
+                if (isPalindrome(s, i, j) && j - i + 1 > length) {
+                    begin = i;
+                    length = j - i + 1;
                 }
             }
         }
 
-        return answer;
+        return s.substring(begin, begin + length);
     }
 
     /**
@@ -79,6 +77,75 @@ public class Question5 {
     }
 
     /**
+     * 动态扩散
+     * 一定要搞清楚状态转移方程 dp[i][j] = s[i] == s[j] and dp[i + 1][j - 1]
+     *
+     * 时间复杂度：O(n²)
+     * 空间复杂度：O(n²)
+     * 二维 dp 问题，一个状态得用二维有序数对表示
+     * */
+    public String longestPalindrome3(String s) {
+        //判断特殊情况
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+        int length = s.length();
+
+        int begin = 0;
+        int maxLength = 1;
+
+        boolean[][] table = new boolean[length][length];
+
+        char[] chars = s.toCharArray();
+
+        //初始化，一个字符一定是回文
+        for(int i = 0;i < length;i++){
+            table[i][i] = true;
+        }
+
+        //i 对应left  j对应right i<j
+        for (int j = 1; j < s.length(); j++) {
+            for (int i = 0; i < j; i++) {
+
+                if (chars[i] != chars[j]) {
+                    //两个字符不相等,一定不是回文
+                    table[i][j] = false;
+                } else {
+                    if (j - i + 1 <= 2) {
+                        table[i][j] = true;
+                    } else {
+                        //参考原来的值
+                        table[i][j] = table[i + 1][j - 1];
+                    }
+                }
+
+                if(table[i][j] && j - i + 1 > maxLength){
+                    begin = i;
+                    maxLength = j - i + 1;
+                }
+
+            }
+        }
+        return s.substring(begin, begin + maxLength);
+    }
+
+    /**
+     * 判断子串是否是回文 s[left,right]
+     */
+    private boolean isPalindrome(String s, int left, int right) {
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    /**
      * 中心扩散
      */
     public int expandAroundCenter(String s, int left, int right) {
@@ -89,21 +156,6 @@ public class Question5 {
             R++;
         }
         return R - L - 1;
-    }
-
-    /**
-     * @param s
-     */
-    public boolean isPalindrome(String s) {
-        int length = s.length();
-
-        for (int i = 0; i < length / 2; i++) {
-            if (s.charAt(i) != s.charAt(length - i - 1)) {
-                return false;
-            }
-        }
-
-        return true;
     }
 
 }
