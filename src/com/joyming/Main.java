@@ -1,9 +1,6 @@
 package com.joyming;
 
-import com.joyming.Solution.Question206;
-import com.joyming.Solution.Question415;
-import com.joyming.Solution.Question5;
-import com.joyming.data.ListNode;
+import com.joyming.Solution.Question1051;
 
 public class Main {
 
@@ -27,8 +24,7 @@ public class Main {
 //            }
 //        }
 
-
-        System.out.print(new Question415().addStrings("1","9"));
+        System.out.print(new Question1051().heightChecker(new int[]{5,1,2,3,4}));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
