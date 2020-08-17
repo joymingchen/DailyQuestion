@@ -1,5 +1,6 @@
 package com.joyming;
 
+import com.joyming.Solution.Question20;
 import com.joyming.Solution.Question696;
 
 public class Main {
@@ -24,7 +25,7 @@ public class Main {
 //            }
 //        }
 
-        System.out.print(new Question696().countBinarySubstrings2("00110011"));
+        System.out.print(new Question20().isValid("(([]){})"));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
