@@ -2,6 +2,7 @@ package com.joyming;
 
 import com.joyming.Solution.Question20;
 import com.joyming.Solution.Question696;
+import com.joyming.Solution.Question922;
 
 public class Main {
 
@@ -25,7 +26,7 @@ public class Main {
 //            }
 //        }
 
-        System.out.print(new Question20().isValid("(([]){})"));
+        System.out.print(new Question922().sortArrayByParityII2(new int[]{3,1,4,2}));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
