@@ -1,9 +1,8 @@
 package com.joyming;
 
-import com.joyming.Solution.Question135;
-import com.joyming.Solution.Question20;
-import com.joyming.Solution.Question696;
-import com.joyming.Solution.Question922;
+import com.joyming.Solution.*;
+
+import java.util.Arrays;
 
 public class Main {
 
@@ -27,7 +26,10 @@ public class Main {
 //            }
 //        }
 
-        System.out.print(new Question135().candy2(new int[]{1,2,87,87,87,2,1}));
+        //[2,3,1,3,2,4,6,7,9,2,19]
+        //[2,1,4,3,9,6]
+        System.out.print(Arrays.toString(new Question1122().relativeSortArray(
+                new int[]{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}, new int[]{2, 1, 4, 3, 9, 6})));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
