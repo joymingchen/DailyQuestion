@@ -28,8 +28,8 @@ public class Main {
 
         //[2,3,1,3,2,4,6,7,9,2,19]
         //[2,1,4,3,9,6]
-        System.out.print(new Question134().canCompleteCircuit2(
-                new int[]{1,2,3,4,5}, new int[]{3,4,5,1,2}));
+        System.out.print(new Question605().canPlaceFlowers2(
+                new int[]{0,0,1,0,1}, 1));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
