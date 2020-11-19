@@ -26,10 +26,16 @@ public class Main {
 //            }
 //        }
 
-        //[2,3,1,3,2,4,6,7,9,2,19]
-        //[2,1,4,3,9,6]
-        System.out.print(new Question605().canPlaceFlowers2(
-                new int[]{0,0,1,0,1}, 1));
+        //[[10,16],[2,8],[1,6],[7,12]]
+        //{-2147483646,-2147483645}, {2147483646,2147483647}
+        // {1,2},{3,4},{5,6},{7,8}
+        //[[10,16],[2,8],[1,6],[7,12]]
+        //[[3,9],[7,12],[3,8],[6,8],[9,10],[2,9],[0,9],[3,9],[0,6],[2,8]]
+
+        int[][] test = {{3,9},{7,12},{3,8},{6,8},{9,10},{2,9},{0,9},{3,9},{0,6},{2,8}};
+
+        System.out.print(new Question452().findMinArrowShots(
+                test));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
