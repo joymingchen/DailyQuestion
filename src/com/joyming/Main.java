@@ -35,7 +35,7 @@ public class Main {
 //        int[][] test = {{3,9},{7,12},{3,8},{6,8},{9,10},{2,9},{0,9},{3,9},{0,6},{2,8}};
 
         int[] test = new int[]{2,0,0,3,12};
-        System.out.print(Arrays.toString(new Question283().moveZeroes3(test)));
+        System.out.print(new Question763().partitionLabels("eaaaabaaec"));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
