@@ -34,9 +34,17 @@ public class Main {
         //[[3,9],[7,12],[3,8],[6,8],[9,10],[2,9],[0,9],[3,9],[0,6],[2,8]]
 
 //        int[][] test = {{3,9},{7,12},{3,8},{6,8},{9,10},{2,9},{0,9},{3,9},{0,6},{2,8}};
+//[-1,-1]
+//[-1,1]
+//[-1,1]
+//[1,-1]
+        int[] A = new int[]{-1,-1};
+        int[] B = new int[]{-1,1};
+        int[] C = new int[]{-1,1};
+        int[] D = new int[]{1,-1};
 
-        int[] test = new int[]{2,0,0,3,12};
-        System.out.print(new Question1370().sortString("jkzkydvxewqjfx"));
+        int[] test = new int[]{3,6,9,1};
+        System.out.print(new Question454().fourSumCount2(A,B,C,D));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
