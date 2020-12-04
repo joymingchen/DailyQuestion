@@ -60,13 +60,13 @@ public class Question164 {
             Arrays.fill(buckets[i], -1);
         }
 
-        for (int i = 0; i < N; i++) {
-            int indexVal = (nums[i] - minVal) / d;
+        for (int num : nums) {
+            int indexVal = (num - minVal) / d;
             if (buckets[indexVal][0] == -1) {
-                buckets[indexVal][0] = buckets[indexVal][1] = nums[i];
+                buckets[indexVal][0] = buckets[indexVal][1] = num;
             } else {
-                buckets[indexVal][0] = Math.min(nums[i], buckets[indexVal][0]);
-                buckets[indexVal][1] = Math.max(nums[i], buckets[indexVal][1]);
+                buckets[indexVal][0] = Math.min(num, buckets[indexVal][0]);
+                buckets[indexVal][1] = Math.max(num, buckets[indexVal][1]);
             }
         }
 
