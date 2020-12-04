@@ -10,10 +10,10 @@ public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 
-        ListNode listNode = new ListNode(4);
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(1);
-        listNode.next.next.next = new ListNode(3);
+//        ListNode listNode = new ListNode(4);
+//        listNode.next = new ListNode(2);
+//        listNode.next.next = new ListNode(1);
+//        listNode.next.next.next = new ListNode(3);
 //        listNode.next.next.next.next = new ListNode(5);
 //
 //        ListNode newList = new Question206().reverseList2(listNode);
@@ -38,13 +38,15 @@ public class Main {
 //[-1,1]
 //[-1,1]
 //[1,-1]
-        int[] A = new int[]{-1,-1};
-        int[] B = new int[]{-1,1};
+//        nums1 = [3, 4, 6, 5]
+// * nums2 = [9, 1, 2, 5, 8, 3]
+        int[] A = new int[]{ 6, 7};
+        int[] B = new int[]{6,0,4};
         int[] C = new int[]{-1,1};
         int[] D = new int[]{1,-1};
 
         int[] test = new int[]{3,6,9,1};
-        System.out.print(new Question454().fourSumCount2(A,B,C,D));
+        System.out.print(new Question204().countPrimes2(1500000));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
