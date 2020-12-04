@@ -40,13 +40,13 @@ public class Main {
 //[1,-1]
 //        nums1 = [3, 4, 6, 5]
 // * nums2 = [9, 1, 2, 5, 8, 3]
-        int[] A = new int[]{1,2,3,3,4,5};
+        int[] A = new int[]{1,1,1,1};
         int[] B = new int[]{6,0,4};
         int[] C = new int[]{-1,1};
         int[] D = new int[]{1,-1};
 
         int[] test = new int[]{3,6,9,1};
-        System.out.print(new Question659().isPossible(A));
+        System.out.print(new Question164().maximumGap2(A));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
