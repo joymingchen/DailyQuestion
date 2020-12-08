@@ -25,12 +25,10 @@ public class Question861 {
      * 先看第一列，全部变为1
      * 再看后面几列，尽可能每列的1足够多
      * 计算结果
-     * @param A
-     * @return
      */
     public int matrixScore(int[][] A) {
         int answer = 0;
-
+        int min = A.length /2;
         for (int i = 0; i < A.length; i++) {
             if (A[i][0] == 0) {
                 //转换整行
@@ -43,13 +41,11 @@ public class Question861 {
                 }
             }
         }
-
-        int min = A.length /2;
         for(int i = 0;i<A[0].length;i++){
             int zeroNum = 0;
 
-            for(int j= 0;j<A.length;j++){
-                if(A[j][i] == 0){
+            for (int[] ints : A) {
+                if (ints[i] == 0) {
                     zeroNum += 1;
                 }
             }
@@ -65,14 +61,13 @@ public class Question861 {
                 }
             }
         }
-
-        for(int i = 0;i<A.length;i++){
-            String tenNum = "";
-            for(int j = 0;j<A[0].length;j++){
-                tenNum += A[i][j];
+        for (int[] ints : A) {
+            StringBuilder tenNum = new StringBuilder();
+            for (int j = 0; j < A[0].length; j++) {
+                tenNum.append(ints[j]);
 
             }
-            answer += Integer.valueOf(tenNum,2);
+            answer += Integer.valueOf(tenNum.toString(), 2);
         }
         return answer;
     }
@@ -83,11 +78,11 @@ public class Question861 {
 
         for (int j = 1; j < n; j++) {
             int nOnes = 0;
-            for (int i = 0; i < m; i++) {
-                if (A[i][0] == 1) {
-                    nOnes += A[i][j];
+            for (int[] ints : A) {
+                if (ints[0] == 1) {
+                    nOnes += ints[j];
                 } else {
-                    nOnes += (1 - A[i][j]); // 如果这一行进行了行反转，则该元素的实际取值为 1 - A[i][j]
+                    nOnes += (1 - ints[j]); // 如果这一行进行了行反转，则该元素的实际取值为 1 - A[i][j]
                 }
             }
             int k = Math.max(nOnes, m - nOnes);
