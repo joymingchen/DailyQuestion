@@ -46,7 +46,7 @@ public class Main {
         int[] D = new int[]{1,-1};
 
         int[] test = new int[]{3,6,9,1};
-        System.out.print(new Question842().splitIntoFibonacci("0123"));
+        System.out.print(new Question62().uniquePaths2(7,3));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
