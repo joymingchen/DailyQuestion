@@ -48,7 +48,7 @@ public class Main {
         int[] test = new int[]{3,6,9,1};
 
         String[] x = {"eat", "tea", "tan", "ate", "nat", "bat"};
-        System.out.print(new Question49().groupAnagrams(x));
+        System.out.print(new Question738().monotoneIncreasingDigits2(999998));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
