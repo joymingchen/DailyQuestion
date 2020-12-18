@@ -58,4 +58,25 @@ public class Question714 {
         }
         return dp[0];
     }
+
+    /**
+     * 贪心算法
+     * 手续费可以加在买入成本上
+     * buy 表示当前的买入价格
+     */
+    public int maxProfit3(int[] prices, int fee) {
+        int buy = prices[0] + fee;
+        int profit = 0;
+        for (int price : prices) {
+            if (buy > price + fee) {
+                buy = price + fee;
+            } else if (buy < price) {
+                //当前卖出价格 - 购入成本
+                profit += price - buy;
+                buy = price;
+            }
+        }
+        return profit;
+    }
+
 }
