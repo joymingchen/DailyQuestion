@@ -2,6 +2,7 @@ package com.joyming;
 
 import com.joyming.Solution.*;
 import com.joyming.data.ListNode;
+import com.joyming.data.TreeNode;
 
 import java.util.Arrays;
 
@@ -48,9 +49,11 @@ public class Main {
 
         int[] test = new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
 
+        TreeNode treeNode = new TreeNode(3,new TreeNode(9),new TreeNode(20,new TreeNode(15),new TreeNode(7)));
+
         String[] x = {"eat", "tea", "tan", "ate", "nat", "bat"};
         //[6,7,6,0,4]
-        System.out.print(Arrays.toString(new Question321().maxNumber(C,D, 50)));
+        System.out.print(new Question103().zigzagLevelOrder2(treeNode));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
