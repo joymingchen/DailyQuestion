@@ -53,7 +53,7 @@ public class Main {
 
         String[] x = {"eat", "tea", "tan", "ate", "nat", "bat"};
         //[6,7,6,0,4]
-        System.out.print(new Question103().zigzagLevelOrder2(treeNode));
+        System.out.print(new Question387().firstUniqChar2("z"));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
