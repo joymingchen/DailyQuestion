@@ -32,32 +32,17 @@ public class Question56 {
         if(intervals.length <= 1){
             return intervals;
         }
-        Arrays.sort(intervals, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                return o1[0] - o2[0];
-            }
-        });
+        Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));
         int n = intervals.length;
         List<int[]> result = new ArrayList<>();
         for(int i = 0;i< n;i++){
             int left = intervals[i][0];
             int right = intervals[i][1];
             int next = i + 1;
-            if(next >= n){
-                result.add(intervals[i]);
-                continue;
-            }
-            int nextLeft = intervals[next][0];
-            int nextRight = intervals[next][1];
-
-            if(next == n || right < nextLeft){
+            if(next == n || right < intervals[next][0]){
                 result.add(intervals[i]);
             }else {
-                int[] newIntervals = new int[]{left,nextRight};
-                if(right > nextRight){
-                    newIntervals = new int[]{left,right};
-                }
+                int[] newIntervals = new int[]{left, Math.max(right, intervals[next][1])};
                 intervals[next] = newIntervals;
             }
         }
