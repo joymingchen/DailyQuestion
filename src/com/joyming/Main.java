@@ -1,5 +1,6 @@
 package com.joyming;
 
+import com.joyming.Custom.SplitStick;
 import com.joyming.Solution.*;
 import com.joyming.data.ListNode;
 import com.joyming.data.TreeNode;
@@ -53,7 +54,7 @@ public class Main {
 
         String[] x = {"eat", "tea", "tan", "ate", "nat", "bat"};
         //[6,7,6,0,4]
-        System.out.print(new Question387().firstUniqChar2("z"));
+        System.out.print(new SplitStick().minSplitStick3(100,5));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
