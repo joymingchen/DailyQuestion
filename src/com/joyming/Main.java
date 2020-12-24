@@ -12,22 +12,22 @@ public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
 
-//        ListNode listNode = new ListNode(4);
-//        listNode.next = new ListNode(2);
-//        listNode.next.next = new ListNode(1);
-//        listNode.next.next.next = new ListNode(3);
-//        listNode.next.next.next.next = new ListNode(5);
+        ListNode listNode = new ListNode(-1);
+        listNode.next = new ListNode(5);
+        listNode.next.next = new ListNode(3);
+        listNode.next.next.next = new ListNode(4);
+        listNode.next.next.next.next = new ListNode(0);
 //
-//        ListNode newList = new Question206().reverseList2(listNode);
+        ListNode newList = new Question147().insertionSortList(listNode);
 
-//        while (newList != null) {
-//            System.out.print(newList.val);
-//            newList = newList.next;
-//
-//            if(newList != null){
-//                System.out.print(" --> ");
-//            }
-//        }
+        while (newList != null) {
+            System.out.print(newList.val);
+            newList = newList.next;
+
+            if(newList != null){
+                System.out.print(" --> ");
+            }
+        }
 
         //[[10,16],[2,8],[1,6],[7,12]]
         //{-2147483646,-2147483645}, {2147483646,2147483647}
@@ -54,7 +54,7 @@ public class Main {
 
         String[] x = {"eat", "tea", "tan", "ate", "nat", "bat"};
         //[6,7,6,0,4]
-        System.out.print(new SplitStick().minSplitStick3(100,5));
+//        System.out.print(new Question147().insertionSortList(listNode));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
