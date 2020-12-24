@@ -25,27 +25,31 @@ import com.joyming.Data.ListNode;
 public class Question147 {
 
     /**
-     *
+     * 链表的插入排序
+     * 时间复杂度：O(n^2)，其中 nn 是链表的长度。
+     * 空间复杂度：O(1)
      */
     public ListNode insertionSortList(ListNode head) {
         if (head == null) {
-            return head;
+            return null;
         }
         ListNode dummyHead = new ListNode(0);
         //方便插入头节点
         dummyHead.next = head;
-        //当前节点
+        //当前节点，从第二个节点开始
         ListNode currentNode = head.next;
         //链表的上一个节点
         ListNode lastIndex = head;
         while (currentNode != null) {
-            if(lastIndex.val <= currentNode.val){
+            if (lastIndex.val <= currentNode.val) {
                 lastIndex = lastIndex.next;
-            }else {
+            } else {
+                //找到需要插入的位置
                 ListNode pre = dummyHead;
-                while (pre.next.val < currentNode.val){
+                while (pre.next.val < currentNode.val) {
                     pre = pre.next;
                 }
+                //画图更直观，三步操作完成插入过程
                 lastIndex.next = currentNode.next;
                 currentNode.next = pre.next;
                 pre.next = currentNode;
