@@ -1,6 +1,6 @@
 package com.joyming.Solution;
 
-import com.joyming.data.TreeNode;
+import com.joyming.Data.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,6 +1,6 @@
 package com.joyming.Solution;
 
-import com.joyming.data.ListNode;
+import com.joyming.Data.ListNode;
 
 /**
  * 剑指offer第24题

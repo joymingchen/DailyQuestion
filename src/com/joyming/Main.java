@@ -1,11 +1,8 @@
 package com.joyming;
 
-import com.joyming.Custom.SplitStick;
 import com.joyming.Solution.*;
-import com.joyming.data.ListNode;
-import com.joyming.data.TreeNode;
-
-import java.util.Arrays;
+import com.joyming.Data.ListNode;
+import com.joyming.Data.TreeNode;
 
 public class Main {
 

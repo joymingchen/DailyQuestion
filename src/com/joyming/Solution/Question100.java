@@ -1,6 +1,6 @@
 package com.joyming.Solution;
 
-import com.joyming.data.TreeNode;
+import com.joyming.Data.TreeNode;
 
 /**
  * 100. 相同的树

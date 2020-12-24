@@ -1,4 +1,4 @@
-package com.joyming.data;
+package com.joyming.Data;
 
 /**
  * 链表

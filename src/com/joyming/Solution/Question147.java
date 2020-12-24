@@ -1,6 +1,6 @@
 package com.joyming.Solution;
 
-import com.joyming.data.ListNode;
+import com.joyming.Data.ListNode;
 
 /**
  * 147. 对链表进行插入排序
