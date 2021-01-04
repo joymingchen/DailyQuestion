@@ -55,7 +55,7 @@ public class Main {
         char[][] table = new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         char[][] table2 = new char[][]{{'A','B'}};
         //[6,7,6,0,4]
-        System.out.print(new Question633().judgeSquareSum(999999999));
+        System.out.print(new Question680().validPalindrome("aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga"));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
