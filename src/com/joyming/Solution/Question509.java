@@ -1,5 +1,7 @@
 package com.joyming.Solution;
 
+import java.util.HashMap;
+
 /**
  * 509. 斐波那契数
  * 斐波那契数，通常用 F(n) 表示，形成的序列称为 斐波那契数列 。
@@ -42,6 +44,28 @@ public class Question509 {
             return 1;
         }
         return fib(n - 1) + fib(n - 2);
+    }
+
+    /**
+     * 递归的方式
+     * 进行剪枝
+     */
+    public int fibPruning(int n) {
+        return fibMap(n,new HashMap<>());
+    }
+
+    private int fibMap(int n, HashMap<Integer, Integer> hashMap) {
+        if(n < 2){
+            return n;
+        }
+        if(hashMap.containsKey(n)){
+            return hashMap.get(n);
+        }
+        int first = fibMap(n -1 ,hashMap);
+        int second = fibMap(n -2 ,hashMap);
+        int sum = first + second;
+        hashMap.put(n,sum);
+        return sum;
     }
 
     /**
