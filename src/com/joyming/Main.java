@@ -4,7 +4,7 @@ import com.joyming.Solution.*;
 import com.joyming.Data.ListNode;
 import com.joyming.Data.TreeNode;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
 
@@ -55,7 +55,29 @@ public class Main {
         char[][] table = new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         char[][] table2 = new char[][]{{'A','B'}};
         //[6,7,6,0,4]
-        System.out.print(new Question830().largeGroupPositions("aaa"));
+
+        List<List<String>> equations = new ArrayList<>();
+        double[] values = new double[2];
+        List<List<String>> queries = new ArrayList<>();
+
+        List<String> arrays = new ArrayList<>();
+        arrays.add("a");
+        arrays.add("b");
+        equations.add(arrays);
+        List<String> arrays1 = new ArrayList<>();
+        arrays1.add("b");
+        arrays1.add("c");
+        equations.add(arrays1);
+
+        values[0] = 2.0;
+        values[1] = 3.0;
+
+        List<String> arrays3 = new ArrayList<>();
+        arrays3.add("a");
+        arrays3.add("c");
+        queries.add(arrays3);
+
+        System.out.print(Arrays.toString(new Question399().calcEquation(equations, values, queries)));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
