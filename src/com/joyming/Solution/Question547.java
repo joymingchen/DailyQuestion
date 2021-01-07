@@ -1,5 +1,8 @@
 package com.joyming.Solution;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 547. 省份数量
  * 有 n 个城市，其中一些彼此相连，另一些没有相连。如果城市 a 与城市 b 直接相连，
@@ -57,7 +60,6 @@ public class Question547 {
                 circle++;
             }
         }
-
         return circle;
     }
 
@@ -84,7 +86,6 @@ public class Question547 {
 
         /**
          * 查找根结点的id
-         *
          */
         private int find(int x) {
             if (parent[x] != x) {
@@ -98,4 +99,58 @@ public class Question547 {
         }
     }
 
+    /**
+     * 深度优先搜索
+     * Depth First Search
+     */
+    public int findCircleNumDFS(int[][] isConnected) {
+        int n = isConnected.length;
+        boolean[] isVisited = new boolean[n];
+        int circle = 0;
+        for (int i = 0; i < n; i++) {
+            if (!isVisited[i]) {
+                circle++;
+                dfs(isConnected, isVisited, i, n);
+            }
+        }
+        return circle;
+    }
+
+    private void dfs(int[][] isConnected, boolean[] isVisited, int i, int n) {
+        for (int j = 0; j < n; j++) {
+            if (isConnected[i][j] == 1 && !isVisited[j]) {
+                isVisited[j] = true;
+                dfs(isConnected, isVisited, j, n);
+            }
+        }
+    }
+
+    /**
+     * 广度优先搜索
+     * Breadth First Search
+     */
+    public int findCircleNumBFS(int[][] isConnected) {
+        int n = isConnected.length;
+        boolean[] isVisited = new boolean[n];
+        int circle = 0;
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (!isVisited[i]) {
+                circle++;
+                queue.offer(i);
+                isVisited[i] = true;
+
+                while (!queue.isEmpty()) {
+                    int v = queue.poll();
+                    for (int w = 0; w < n; w++) {
+                        if (!isVisited[w] && isConnected[v][w] == 1) {
+                            isVisited[w] = true;
+                            queue.offer(w);
+                        }
+                    }
+                }
+            }
+        }
+        return circle;
+    }
 }
