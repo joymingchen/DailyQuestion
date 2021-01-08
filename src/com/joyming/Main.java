@@ -73,14 +73,15 @@ public class Main {
         values[1] = 3.0;
 
         List<String> arrays3 = new ArrayList<>();
-        arrays3.add("a");
+        arrays3.add("apple");
+        arrays3.add("b");
         arrays3.add("c");
         queries.add(arrays3);
 
         //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
         int[][] A2 = new int[][]{{1,0,0,1}, {0,1,1,0}, {0,1,1,1}, {1,0,1,1}};
 
-        System.out.print(new Question547().findCircleNum(A2));
+        System.out.print(new Question524().findLongestWordTP("abpcplea",arrays3));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
