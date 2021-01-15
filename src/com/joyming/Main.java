@@ -80,8 +80,9 @@ public class Main {
 
         //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
         int[][] A2 = new int[][]{{1,0,0,1}, {0,1,1,0}, {0,1,1,1}, {1,0,1,1}};
-        int[] B2 = new int[]{0,1,2,4,5,7};
-        System.out.print(new Question228().summaryRanges(B2));
+        int[] B2 = new int[]{3,3,5,0,0,3,1,4};
+        int[] B3 = new int[]{1,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,1,1,1};
+        System.out.print(new Question1018().prefixesDivBy5(B3));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
