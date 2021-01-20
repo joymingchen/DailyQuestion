@@ -80,9 +80,10 @@ public class Main {
 
         //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
         int[][] A2 = new int[][]{{1,0,0,1}, {0,1,1,0}, {0,1,1,1}, {1,0,1,1}};
-        int[] B2 = new int[]{3,3,5,0,0,3,1,4};
+        int[][] A3 = new int[][]{{1,2}, {1,3},{3,3},{3,1},{2,1},{1,0}};
+        int[] B2 = new int[]{-100,-98,-1,2,3,4};
         int[] B3 = new int[]{1,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,1,1,1};
-        System.out.print(new Question1018().prefixesDivBy5(B3));
+        System.out.print(new Question628().maximumProduct2(B2));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
