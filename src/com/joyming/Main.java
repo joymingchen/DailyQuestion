@@ -80,10 +80,10 @@ public class Main {
 
         //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
         int[][] A2 = new int[][]{{1,0,0,1}, {0,1,1,0}, {0,1,1,1}, {1,0,1,1}};
-        int[][] A3 = new int[][]{{1,2}, {1,3},{3,3},{3,1},{2,1},{1,0}};
+        int[][] A3 = new int[][]{{0,0},{1,1},{1,0},{-1,1}};
         int[] B2 = new int[]{-100,-98,-1,2,3,4};
         int[] B3 = new int[]{1,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,1,1,1};
-        System.out.print(new Question628().maximumProduct2(B2));
+        System.out.print(new Question1584().minCostConnectPoints(A3));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
