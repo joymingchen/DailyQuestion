@@ -160,9 +160,13 @@ public class Question1584 {
 
         /**
          * 寻找根结点
+         * 路径压缩
          */
         private int find(int x) {
-            return parent[x] == x ? x : find(parent[x]);
+            if(parent[x] != x){
+                parent[x] = find(parent[x]);
+            }
+            return parent[x];
         }
     }
 
