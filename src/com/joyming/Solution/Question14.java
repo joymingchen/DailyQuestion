@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
+ * 14. 最长公共前缀
  * Write a function to find the longest common prefix string amongst an array of strings.
  * <p>
  * If there is no common prefix, return an empty string "".
