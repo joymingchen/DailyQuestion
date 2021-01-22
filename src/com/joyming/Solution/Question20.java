@@ -1,5 +1,7 @@
 package com.joyming.Solution;
 
+import java.util.Stack;
+
 /**
  * 20. 有效的括号
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -36,60 +38,49 @@ public class Question20 {
         if (s == null || s.equals("")) {
             return false;
         }
-
-        if (s.equals("")) {
-            return true;
-        }
-        if (s.length() % 2 != 0) {
+        int n = s.length();
+        if (n % 2 != 0) {
             return false;
         }
 
-        String left = "({[";
-
+        Stack<String> stack = new Stack<>();
         char[] chars = s.toCharArray();
-
-
-        if (s.length() == 2 || s.length() == 4 || s.length() == 6) {
-            //非对称结构
-            if (s.contains("()") && s.contains("[]") && s.contains("{}")) {
-                return true;
-            } else if (s.contains("()") && s.contains("[]")) {
-                return true;
-            } else if (s.contains("()") && s.contains("{}")) {
-                return true;
-            } else if (s.contains("[]") && s.contains("{}")) {
-                return true;
-            }
-
-            //对称结构
-            for (int i = 0; i < (s.length() / 2); i++) {
-                if (!left.contains(String.valueOf(chars[i]))) {
+        for (int i = 0; i < n; i++) {
+            String item = String.valueOf(chars[i]);
+            if(item.equals("(") || item.equals("[")||item.equals("{")){
+                stack.push(item);
+            }else {
+                if(!stack.isEmpty()){
+                    if(!isMatch(stack.pop(),item)){
+                        return false;
+                    }
+                }else {
                     return false;
                 }
-                switch (chars[i]) {
-                    case '(':
-                        if (chars[s.length() - i - 1] == ')') {
-                            continue;
-                        } else {
-                            return false;
-                        }
-                    case '[':
-                        if (chars[s.length() - i - 1] == ']') {
-                            continue;
-                        } else {
-                            return false;
-                        }
-                    case '{':
-                        if (chars[s.length() - i - 1] == '}') {
-                            continue;
-                        } else {
-                            return false;
-                        }
-                }
             }
-            return true;
-        } else {
-            return false;
         }
+        return stack.isEmpty();
     }
+
+    public boolean isMatch(String left, String right) {
+        switch (left) {
+            case "(":
+                if (right.equals(")")) {
+                    return true;
+                }
+                break;
+            case "[":
+                if (right.equals("]")) {
+                    return true;
+                }
+                break;
+            case "{":
+                if (right.equals("}")) {
+                    return true;
+                }
+                break;
+        }
+        return false;
+    }
+
 }
