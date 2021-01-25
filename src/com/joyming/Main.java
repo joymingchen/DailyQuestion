@@ -49,38 +49,14 @@ public class Main {
 
         //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
         int[][] A2 = new int[][]{{1,0,0,1}, {0,1,1,0}, {0,1,1,1}, {1,0,1,1}};
-        int[][] A3 = new int[][]{{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}};
-        String[][] Str = new String[][]{{"John", "johnsmith@mail.com", "john00@mail.com"},
-                {"John", "johnnybravo@mail.com"},
-                {"John", "johnsmith@mail.com", "john_newyork@mail.com"}, {"Mary", "mary@mail.com"}};
+        int[][] A3 = new int[][]{{0,1,1},{1,2,1},{0,2,1},{2,3,4},{3,4,2},{3,5,2},{4,5,2}};
 
-
-        List<List<String>> list = new ArrayList<>();
-        List<String> arr = new ArrayList<>();
-        arr.add("John");
-        arr.add("john00@mail.com");
-        list.add(arr);
-
-        List<String> arr1 = new ArrayList<>();
-        arr1.add("John");
-        arr1.add("johnnybravo@mail.com");
-        list.add(arr1);
-
-        List<String> arr2 = new ArrayList<>();
-        arr2.add("John");
-        arr2.add("johnsmith@mail.com");
-        arr2.add("john_newyork@mail.com");
-        list.add(arr2);
-
-        List<String> arr3 = new ArrayList<>();
-        arr3.add("Mary");
-        arr3.add("mary@mail.com");
-        list.add(arr3);
+        int[][] A4 = new int[][]{{0,1,1},{0,3,1},{0,2,1},{1,2,1},{1,3,1},{2,3,1}};
 
 
         int[] B2 = new int[]{-100,-98,-1,2,3,4};
         int[] B3 = new int[]{1,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,1,1,1};
-        System.out.print(new Question721().accountsMerge(list));
+        System.out.print(new Question1489().findCriticalAndPseudoCriticalEdges(4,A4));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
