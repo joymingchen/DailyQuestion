@@ -52,11 +52,11 @@ public class Main {
         int[][] A3 = new int[][]{{0,1,1},{1,2,1},{0,2,1},{2,3,4},{3,4,2},{3,5,2},{4,5,2}};
 
         int[][] A4 = new int[][]{{0,1,1},{0,3,1},{0,2,1},{1,2,1},{1,3,1},{2,3,1}};
+        int[][] A6 = new int[][]{{1,2,2},{3,8,2},{5,3,5}};
+        int[][] A5 = new int[][]{{1,10,6,7,9,10,4,9}};
+        int[][] A7 = new int[][]{{1,2,1,1,1},{1,2,1,2,1},{1,2,1,2,1},{1,2,1,2,1},{1,1,1,2,1}};
 
-
-        int[] B2 = new int[]{-100,-98,-1,2,3,4};
-        int[] B3 = new int[]{1,0,1,0,0,0,0,0,0,0,0,1,1,1,0,0,1,0,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0,1,1,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0,0,1,1,0,0,1,1,1};
-        System.out.print(new Question1489().findCriticalAndPseudoCriticalEdges(4,A4));
+        System.out.print(new Question1631().minimumEffortPath2(A7));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
