@@ -54,9 +54,10 @@ public class Main {
         int[][] A4 = new int[][]{{0,1,1},{0,3,1},{0,2,1},{1,2,1},{1,3,1},{2,3,1}};
         int[][] A6 = new int[][]{{1,2,2},{3,8,2},{5,3,5}};
         int[][] A5 = new int[][]{{1,10,6,7,9,10,4,9}};
+        int[][] B8 = new int[][]{{1,1000000}};
         int[][] A7 = new int[][]{{1,2,1,1,1},{1,2,1,2,1},{1,2,1,2,1},{1,2,1,2,1},{1,1,1,2,1}};
 
-        System.out.print(new Question424().characterReplacement("ABBB",2));
+        System.out.print(new Question1631().minimumEffortPath3(B8));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");

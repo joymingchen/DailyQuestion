@@ -51,6 +51,58 @@ public class Question1631 {
     }
 
     /**
+     * 假设答案为x,利用二分查找在[0,99999]范围内寻找这个x的值
+     * 广度优先搜索
+     * 当 x < ans，我们无法从左上角到达右下角；
+     * 当 x ≥ ans，我们可以从左上角到达右下角。
+     */
+    public int minimumEffortPath3(int[][] heights) {
+        int m = heights.length;
+        int n = heights[0].length;
+
+        int answer = 0;
+        int left = 0, right = 999999;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            Queue<int[]> queue = new LinkedList<int[]>();
+            queue.offer(new int[]{0, 0});
+            boolean[] visited = new boolean[n * m];
+            visited[0] = true;
+
+            while (!queue.isEmpty()) {
+
+                int[] current = queue.poll();
+                int x = current[0], y = current[1];
+
+                for (int i = 0; i < 4; i++) {  //对于当前坐标点(x,y)，再对它的四个方向进行遍历
+                    int xx = x + directions[0][i];
+                    int yy = y + directions[1][i];
+                    int idId = xx * n + yy;
+                    if (xx >= 0 && xx < m && yy >= 0 && yy < n) {
+                        int diff = Math.abs(heights[xx][yy] - heights[x][y]);
+
+                        if (diff <= mid && !visited[idId]) {
+                            queue.offer(new int[]{xx, yy});
+                            visited[idId] = true;
+                        }
+                    }
+                }
+            }
+
+            if (visited[m * n - 1]) {
+                answer = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return answer;
+    }
+
+
+    /**
      * 深度优先搜索
      * 超时
      */
@@ -62,6 +114,7 @@ public class Question1631 {
         if (x < 0 || y < 0 || x >= n || y >= m) {
             return;
         }
+
 
         visited[x][y] = true;
 
@@ -149,7 +202,6 @@ public class Question1631 {
      * 这题并查集思路是按照边权从小到大建图直到坐上右下点联通，
      * 因此都是优先加权重低的边。这道题不是构造一棵树，但kruskal是构造总权重最低的生成树
      * 利用并查集来判断连通性
-     *
      */
     public int minimumEffortPath2(int[][] heights) {
         int m = heights.length;
