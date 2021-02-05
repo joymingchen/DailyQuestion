@@ -55,11 +55,12 @@ public class Main {
         int[][] A6 = new int[][]{{1,2,2},{3,8,2},{5,3,5}};
         int[][] A5 = new int[][]{{1,10,6,7,9,10,4,9}};
         int[] B8 = new int[]{2147483647,2147483647};
-        int[] B9 = new int[]{1,12,-5,-6,50,3};
+        int[] B9 = new int[]{1,3,-1,-3,5,3,6,7};
+        int[] B91 = new int[]{1,4,2,3};
         int[] B10 = new int[]{-1};
         int[][] A7 = new int[][]{{1,2,1,1,1},{1,2,1,2,1},{1,2,1,2,1},{1,2,1,2,1},{1,1,1,2,1}};
 
-        System.out.print(new Question643().findMaxAverage(B9, 4));
+        System.out.print(Arrays.toString(new Question480().medianSlidingWindow2(B91, 4)));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
