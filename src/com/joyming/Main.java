@@ -60,7 +60,9 @@ public class Main {
         int[] B10 = new int[]{-1};
         int[][] A7 = new int[][]{{1,2,1,1,1},{1,2,1,2,1},{1,2,1,2,1},{1,2,1,2,1},{1,1,1,2,1}};
 
-        System.out.print(Arrays.toString(new Question480().medianSlidingWindow2(B91, 4)));
+        System.out.print(new Question1208().equalSubstring("abcd",
+                "cdef",
+                3));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
