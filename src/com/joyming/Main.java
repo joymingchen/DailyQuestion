@@ -56,13 +56,12 @@ public class Main {
         int[][] A5 = new int[][]{{1,10,6,7,9,10,4,9}};
         int[] B8 = new int[]{2147483647,2147483647};
         int[] B9 = new int[]{1,3,-1,-3,5,3,6,7};
-        int[] B91 = new int[]{1,4,2,3};
-        int[] B10 = new int[]{-1};
-        int[][] A7 = new int[][]{{1,2,1,1,1},{1,2,1,2,1},{1,2,1,2,1},{1,2,1,2,1},{1,1,1,2,1}};
+        int[] B91 = new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
+        int[] B92 = new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
+        int[] B93 = new int[]{0,0,1,1,1,0,0};
+        int[] B94 = new int[]{1,1,1,0,0,0,1,1,1,1};
 
-        System.out.print(new Question1208().equalSubstring("abcd",
-                "cdef",
-                3));
+        System.out.print(new Question1004().longestOnes(B93, 0));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
