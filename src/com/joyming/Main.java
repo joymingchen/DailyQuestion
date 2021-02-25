@@ -58,10 +58,10 @@ public class Main {
         int[] B9 = new int[]{1,3,-1,-3,5,3,6,7};
         int[] B91 = new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
         int[] B92 = new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
-        int[] B93 = new int[]{0,0,1,1,1,0,0};
+        int[] B93 = new int[]{1,2,2,3,1};
         int[] B94 = new int[]{1,1,1,0,0,0,1,1,1,1};
 
-        System.out.print(new Question1004().longestOnes(B93, 0));
+        System.out.print(new Question697().findShortestSubArray2(B93));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
