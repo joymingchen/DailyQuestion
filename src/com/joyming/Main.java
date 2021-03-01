@@ -53,15 +53,16 @@ public class Main {
 
         int[][] A4 = new int[][]{{0,1,1},{0,3,1},{0,2,1},{1,2,1},{1,3,1},{2,3,1}};
         int[][] A6 = new int[][]{{1,2,2},{3,8,2},{5,3,5}};
-        int[][] A5 = new int[][]{{1,10,6,7,9,10,4,9}};
-        int[] B8 = new int[]{2147483647,2147483647};
-        int[] B9 = new int[]{1,3,-1,-3,5,3,6,7};
-        int[] B91 = new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
-        int[] B92 = new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
-        int[] B93 = new int[]{1,2,2,3,1};
-        int[] B94 = new int[]{1,1,1,0,0,0,1,1,1,1};
 
-        System.out.print(new Question697().findShortestSubArray2(B93));
+        String[] words = new String[]{"aaaa","asas","able","ability","actt","actor","access"};
+        String[] puzzles = new String[]{"aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"};
+
+        String[] words1 = new String[]{"apple","pleas","please"};
+        String[] puzzles1 = new String[]{"aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"};
+
+
+
+        System.out.print(new Question1178().findNumOfValidWords2(words1,puzzles1));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
