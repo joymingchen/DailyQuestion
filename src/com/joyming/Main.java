@@ -62,7 +62,7 @@ public class Main {
 
 
 
-        System.out.print(new Question1178().findNumOfValidWords2(words1,puzzles1));
+        System.out.print(new Question338().countBits2(5));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
