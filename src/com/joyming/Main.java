@@ -52,17 +52,15 @@ public class Main {
         int[][] A3 = new int[][]{{0,1,1},{1,2,1},{0,2,1},{2,3,4},{3,4,2},{3,5,2},{4,5,2}};
 
         int[][] A4 = new int[][]{{0,1,1},{0,3,1},{0,2,1},{1,2,1},{1,3,1},{2,3,1}};
-        int[][] A6 = new int[][]{{1,2,2},{3,8,2},{5,3,5}};
-
-        String[] words = new String[]{"aaaa","asas","able","ability","actt","actor","access"};
-        String[] puzzles = new String[]{"aboveyz","abrodyz","abslute","absoryz","actresz","gaswxyz"};
+        int[][] A6 = new int[][]{{5,4},{6,4},{6,7},{2,3}};
+        int[][] A7 = new int[][]{{2,100},{3,200},{4,300},{5,250},{5,400},{5,500},{6,370},{6,360},{7,380}};
 
         String[] words1 = new String[]{"apple","pleas","please"};
         String[] puzzles1 = new String[]{"aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"};
 
 
 
-        System.out.print(new Question338().countBits2(5));
+        System.out.print(new Question354().maxEnvelopes(A7));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
