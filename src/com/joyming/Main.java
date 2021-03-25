@@ -18,18 +18,6 @@ public class Main {
         int[] C = new int[]{8, 0, 4, 4, 1, 7, 3, 6, 5, 9, 3, 6, 6, 0, 2, 5, 1, 7, 7, 7, 8, 7, 1, 4, 4, 5, 4, 8, 7, 6, 2, 2, 9, 4, 7, 5, 6, 2, 2, 8, 4, 6, 0, 4, 7, 8, 9, 1, 7, 0};
         int[] D = new int[]{6, 9, 8, 1, 1, 5, 7, 3, 1, 3, 3, 4, 9, 2, 8, 0, 6, 9, 3, 3, 7, 8, 3, 4, 2, 4, 7, 4, 5, 7, 7, 2, 5, 6, 3, 6, 7, 0, 3, 5, 3, 2, 8, 1, 6, 6, 1, 0, 8, 4};
 
-        int[] test = new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-
-        TreeNode treeNode = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-
-        String[] x = {"eat", "tea", "tan", "ate", "nat", "bat"};
-        char[][] table = new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
-        char[][] table2 = new char[][]{{'A','B'}};
-        //[6,7,6,0,4]
-
-        List<List<String>> equations = new ArrayList<>();
-        double[] values = new double[2];
-        List<List<String>> queries = new ArrayList<>();
 
         //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
         int[][] A2 = new int[][]{{1,0,0,1}, {0,1,1,0}, {0,1,1,1}, {1,0,1,1}};
@@ -44,7 +32,22 @@ public class Main {
 
         int[] A8 = new int[]{3,1,4,2};
 
-        System.out.print(new Question456().find132pattern(A8));
+        ListNode listNode = new ListNode(1);
+        listNode.next = new ListNode(1);
+        listNode.next.next = new ListNode(3);
+        listNode.next.next.next = new ListNode(3);
+        listNode.next.next.next.next = new ListNode(4);
+        listNode.next.next.next.next.next = new ListNode(4);
+        listNode.next.next.next.next.next.next = new ListNode(5);
+
+        ListNode head = new Question82().deleteDuplicates(listNode);
+
+        while (head!= null){
+            System.out.print(head.val + " - >");
+            head = head.next;
+        }
+
+//        System.out.print(new Question82().deleteDuplicates(listNode));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
