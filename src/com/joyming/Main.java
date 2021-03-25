@@ -42,72 +42,9 @@ public class Main {
         String[] words1 = new String[]{"apple","pleas","please"};
         String[] puzzles1 = new String[]{"aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"};
 
-        List<NestedInteger> nestedList =new ArrayList<>();
+        int[] A8 = new int[]{3,1,4,2};
 
-        NestedInteger nestedInteger = new NestedInteger() {
-            @Override
-            public boolean isInteger() {
-                return true;
-            }
-
-            @Override
-            public Integer getInteger() {
-                return 2;
-            }
-
-            @Override
-            public List<NestedInteger> getList() {
-                return new ArrayList<>();
-            }
-        };
-
-        nestedList.add(new NestedInteger() {
-            @Override
-            public boolean isInteger() {
-                return true;
-            }
-
-            @Override
-            public Integer getInteger() {
-                return 5;
-            }
-
-            @Override
-            public List<NestedInteger> getList() {
-                return null;
-            }
-        });
-        nestedList.add(new NestedInteger() {
-            @Override
-            public boolean isInteger() {
-                return false;
-            }
-
-            @Override
-            public Integer getInteger() {
-                return 3;
-            }
-
-            @Override
-            public List<NestedInteger> getList() {
-                List<NestedInteger> nestedIntegerList = new ArrayList<>();
-                nestedIntegerList.add(nestedInteger);
-                nestedIntegerList.add(nestedInteger);
-                return nestedIntegerList;
-            }
-        });
-        Question341.NestedIterator i = new Question341.NestedIterator(nestedList);
-        while (i.hasNext()){
-            Integer num = i.next();
-
-            System.out.print("\n" + num);
-
-        }
-
-
-
-
-//        System.out.print(new Question354().maxEnvelopes(A7));
+        System.out.print(new Question456().find132pattern(A8));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
