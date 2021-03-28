@@ -1,5 +1,6 @@
 package com.joyming;
 
+import com.joyming.Custom.Binary2Chinese;
 import com.joyming.Data.NestedInteger;
 import com.joyming.Solution.*;
 import com.joyming.Data.ListNode;
@@ -42,12 +43,12 @@ public class Main {
 
         ListNode head = new Question82().deleteDuplicates(listNode);
 
-        while (head!= null){
-            System.out.print(head.val + " - >");
-            head = head.next;
-        }
+//        while (head!= null){
+//            System.out.print(head.val + " - >");
+//            head = head.next;
+//        }
 
-//        System.out.print(new Question82().deleteDuplicates(listNode));
+        System.out.println(new Binary2Chinese().binary2Chinese(6));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
