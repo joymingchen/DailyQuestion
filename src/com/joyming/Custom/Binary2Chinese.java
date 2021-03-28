@@ -3,9 +3,27 @@ package com.joyming.Custom;
 /**
  * 将二进制的数字转换为中文
  * 范围为 0 ~ 2^16
+ *
+ * 示例 1:
+ * 输入: 2
+ * 输出: 十
+ * 解释: 2 的二进制为 10
+ *
+ * 示例 2:
+ * 输入: 6
+ * 输出: 一百一
+ * 解释: 6 的二进制为 110
+ *
+ * 示例 3:
+ * 输入: 174
+ * 输出: 一千零一十万一千一百一
+ * 解释: 174 的二进制为 10101110
  */
 public class Binary2Chinese {
 
+    /**
+     * 时间复杂度: O(n)
+     */
     public String binary2Chinese(int n) {
         if (n == 2) {
             return "十";
