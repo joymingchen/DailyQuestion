@@ -31,7 +31,7 @@ public class Main {
         String[] words1 = new String[]{"apple","pleas","please"};
         String[] puzzles1 = new String[]{"aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"};
 
-        int[] A8 = new int[]{3,1,4,2};
+        int[] A8 = new int[]{1,2,2};
 
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(1);
@@ -48,7 +48,7 @@ public class Main {
 //            head = head.next;
 //        }
 
-        System.out.println(new Binary2Chinese().binary2Chinese(102));
+        System.out.println(new Question90().subsetsWithDup(A8));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
