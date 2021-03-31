@@ -31,10 +31,10 @@ public class Binary2Chinese {
         if (n == 3) {
             return "十一";
         }
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         //1000 0000 0000 0000
         int maxValue = 32768;
-        String num = "";
+        StringBuilder num = new StringBuilder();
         String[] unitText = {"兆", "亿", "万", ""};
         int unitNum = 0;
         int intervalNum = 0;
@@ -50,54 +50,48 @@ public class Binary2Chinese {
         for (int i = 0; i < 16; i++) {
             if ((n & (maxValue >> i)) != 0) {
                 //1位
-                num += "1";
+                num.append("1");
                 switch (intervalNum) {
                     case 0:
                         isHaveThousand = true;
-                        answer += "一千";
+                        answer.append("一千");
                         break;
                     case 1:
                         isHaveHundred = true;
-                        answer += "一百";
+                        answer.append("一百");
                         break;
                     case 2:
                         isHaveTen = true;
-                        answer += "一十";
+                        answer.append("一十");
                         break;
                     case 3:
                         isHaveOne = true;
-                        answer += "一";
+                        answer.append("一");
                         break;
                 }
             } else {
-                num += "0";
-                answer += "零";
+                num.append("0");
+                answer.append("零");
             }
             if (intervalNum == 3) {
                 //零的特殊处理
-                answer = answer.replaceAll("零零零零", "");
-                answer = answer.replaceAll("零零零", "");
-                answer = answer.replaceAll("零零", "零");
+                answer = new StringBuilder(answer.toString().replaceAll("零零零零", ""));
+                answer = new StringBuilder(answer.toString().replaceAll("零零零", ""));
+                answer = new StringBuilder(answer.toString().replaceAll("零零", "零"));
 
-                if (answer.startsWith("零")) {
-                    answer = answer.substring(1, answer.length());
+                if (answer.toString().startsWith("零")) {
+                    answer = new StringBuilder(answer.substring(1, answer.length()));
                 }
-                if (answer.endsWith("十零")) {
-                    answer = answer.substring(0, answer.length() - 1);
+                if (answer.toString().endsWith("十零")) {
+                    answer = new StringBuilder(answer.substring(0, answer.length() - 1));
                 }
-                if (answer.endsWith("百零")) {
-                    answer = answer.substring(0, answer.length() - 1);
-                }
-                if (answer.endsWith("一千一百")) {
-                    answer = answer.substring(0, answer.length() - 1);
-                }
-                if (answer.endsWith("一百一十")) {
-                    answer = answer.substring(0, answer.length() - 1);
+                if (answer.toString().endsWith("百零")) {
+                    answer = new StringBuilder(answer.substring(0, answer.length() - 1));
                 }
 
                 //单位
                 if (isHaveThousand || isHaveHundred || isHaveTen || isHaveOne) {
-                    answer += unitText[unitNum];
+                    answer.append(unitText[unitNum]);
                 }
 
                 //标记位初始化
@@ -110,7 +104,14 @@ public class Binary2Chinese {
             }
             intervalNum++;
         }
+
+        if (answer.toString().endsWith("一千一百")) {
+            answer = new StringBuilder(answer.substring(0, answer.length() - 1));
+        }
+        if (answer.toString().endsWith("一百一十")) {
+            answer = new StringBuilder(answer.substring(0, answer.length() - 1));
+        }
         System.out.println("\n数字:" + num + " ");
-        return answer;
+        return answer.toString();
     }
 }

@@ -48,7 +48,7 @@ public class Main {
 //            head = head.next;
 //        }
 
-        System.out.println(new Binary2Chinese().binary2Chinese(6));
+        System.out.println(new Binary2Chinese().binary2Chinese(102));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
