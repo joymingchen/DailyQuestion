@@ -48,7 +48,7 @@ public class Main {
 //            head = head.next;
 //        }
 
-        System.out.println(new Question90().subsetsWithDup(A8));
+        System.out.println(new Question1006().clumsy2(10));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
