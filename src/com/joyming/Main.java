@@ -1,5 +1,6 @@
 package com.joyming;
 
+import com.joyming.CodingInterview.Question_17_21;
 import com.joyming.Custom.Binary2Chinese;
 import com.joyming.Data.NestedInteger;
 import com.joyming.Solution.*;
@@ -31,7 +32,8 @@ public class Main {
         String[] words1 = new String[]{"apple","pleas","please"};
         String[] puzzles1 = new String[]{"aelwxyz","aelpxyz","aelpsxy","saelpxy","xaelpsy"};
 
-        int[] A8 = new int[]{1,2,2};
+        int[] A8 = new int[]{1,1,1,1};
+        int[] A9 = new int[]{0,0,1,1,1,1,2,3,3,3,3};
 
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(1);
@@ -48,7 +50,7 @@ public class Main {
 //            head = head.next;
 //        }
 
-        System.out.println(new Question1006().clumsy2(10));
+        System.out.println(new Question80().removeDuplicates(A9));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
