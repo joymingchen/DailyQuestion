@@ -28,7 +28,7 @@ public class Main {
 //            }
 //        }
 
-        int[] test = new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
+        int[] test = new int[]{2,3,2,2};
 
         TreeNode treeNode = new TreeNode(10, new TreeNode(5, new TreeNode(3), new TreeNode(7)),
                 new TreeNode(15, null, new TreeNode(18)));
@@ -36,7 +36,7 @@ public class Main {
         //[6,7,6,0,4]
 
 
-        System.out.print(new Question938().bfs(treeNode,7,15));
+        System.out.print(new Question137().singleNumber2(test));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
