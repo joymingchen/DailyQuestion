@@ -28,7 +28,7 @@ public class Main {
 //            }
 //        }
 
-        int[] test = new int[]{2,3,2,2};
+        int[] test = new int[]{5,3,4,5};
 
         TreeNode treeNode = new TreeNode(10, new TreeNode(5, new TreeNode(3), new TreeNode(7)),
                 new TreeNode(15, null, new TreeNode(18)));
@@ -36,7 +36,7 @@ public class Main {
         //[6,7,6,0,4]
 
 
-        System.out.print(new Question137().singleNumber2(test));
+        System.out.print(new Question877().stoneGame(test));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
