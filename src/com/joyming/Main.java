@@ -36,7 +36,7 @@ public class Main {
         //[6,7,6,0,4]
 
 
-        System.out.print(new Question877().stoneGame(test));
+        System.out.print(new Question168().convertToTitle(701));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
