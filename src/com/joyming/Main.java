@@ -1,5 +1,6 @@
 package com.joyming;
 
+import com.joyming.CodingInterview.Question_01_08;
 import com.joyming.Solution.*;
 import com.joyming.Data.ListNode;
 import com.joyming.Data.TreeNode;
@@ -28,15 +29,15 @@ public class Main {
 //            }
 //        }
 
-        int[] test = new int[]{5,3,4,5};
+        int[] test = new int[]{5, 3, 4, 5};
 
         TreeNode treeNode = new TreeNode(10, new TreeNode(5, new TreeNode(3), new TreeNode(7)),
                 new TreeNode(15, null, new TreeNode(18)));
 
-        //[6,7,6,0,4]
+        int[][] matrix = {{1,2,3},{1,0,1},{1,1,1}};
 
 
-        System.out.print(new Question168().convertToTitle(701));
+        System.out.print(new Question_01_08().setZeroes(matrix));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
