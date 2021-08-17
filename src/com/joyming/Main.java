@@ -34,11 +34,15 @@ public class Main {
         TreeNode treeNode = new TreeNode(10, new TreeNode(5, new TreeNode(3), new TreeNode(7)),
                 new TreeNode(15, null, new TreeNode(18)));
 
-        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
-        int[][] matrix2 = {{1,2}};
+        TreeNode treeNode2 = new TreeNode(2, new TreeNode(2), new TreeNode(5, new TreeNode(5), new TreeNode(7)));
 
+        int[][] matrix = {{1, 2, 3}, {1, 0, 1}, {1, 1, 1}};
 
-        System.out.print(Arrays.toString(new Question498().findDiagonalOrder(matrix2)));
+        //[2147483647,2147483647,2147483647]
+        TreeNode treeNode3 = new TreeNode(2147483647,
+                new TreeNode(2147483647,new TreeNode(2147483647),null),null);
+
+        System.out.print(new Question671().findSecondMinimumValue(treeNode2));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
