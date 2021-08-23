@@ -42,7 +42,7 @@ public class Main {
         TreeNode treeNode3 = new TreeNode(2147483647,
                 new TreeNode(2147483647,new TreeNode(2147483647),null),null);
 
-        System.out.print(new Question541().reverseStr("abcdefg",2));
+        System.out.print(new Question1646().getMaximumGenerated(2));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
