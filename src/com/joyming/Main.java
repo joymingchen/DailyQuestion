@@ -40,9 +40,14 @@ public class Main {
 
         //[2147483647,2147483647,2147483647]
         TreeNode treeNode3 = new TreeNode(2147483647,
-                new TreeNode(2147483647,new TreeNode(2147483647),null),null);
+                new TreeNode(2147483647, new TreeNode(2147483647), null), null);
 
-        System.out.print(new Question1646().getMaximumGenerated(2));
+        //[[0,1,100],[1,2,100],[0,2,500]]
+        int[][] flights = new int[3][3];
+        flights[0] = new int[]{0, 1, 100};
+        flights[1] = new int[]{1, 2, 100};
+        flights[2] = new int[]{0, 2, 500};
+        System.out.print(new Question1221().balancedStringSplit("RLRRRLLRLL"));
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
