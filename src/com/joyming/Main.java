@@ -1,11 +1,7 @@
 package com.joyming;
 
-import com.joyming.CodingInterview.Question_01_08;
 import com.joyming.Solution.*;
-import com.joyming.Data.ListNode;
 import com.joyming.Data.TreeNode;
-
-import java.util.*;
 
 public class Main {
 
@@ -47,7 +43,21 @@ public class Main {
         flights[0] = new int[]{0, 1, 100};
         flights[1] = new int[]{1, 2, 100};
         flights[2] = new int[]{0, 2, 500};
-        System.out.print(new Question1221().balancedStringSplit("RLRRRLLRLL"));
+
+
+        Question211 wordDictionary = new Question211();
+        wordDictionary.addWord("bad");
+        wordDictionary.addWord("dad");
+        wordDictionary.addWord("mad");
+//        wordDictionary.search("pad"); // return False
+//        wordDictionary.search("bad"); // return True
+//        wordDictionary.search(".ad"); // return True
+//        wordDictionary.search("b.."); // return True
+
+        System.out.print(wordDictionary.search("pad") + "\n");
+        System.out.print(wordDictionary.search("bad") + "\n");
+        System.out.print(wordDictionary.search("b..") + "\n");
+        System.out.print(wordDictionary.search("b..") + "\n");
 
         long endTime = System.currentTimeMillis();
         System.out.println("\n\n执行时间:" + (endTime - startTime) + "ms");
