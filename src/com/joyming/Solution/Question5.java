@@ -79,11 +79,11 @@ public class Question5 {
     /**
      * 动态扩散
      * 一定要搞清楚状态转移方程 dp[i][j] = s[i] == s[j] and dp[i + 1][j - 1]
-     *
+     * <p>
      * 时间复杂度：O(n²)
      * 空间复杂度：O(n²)
      * 二维 dp 问题，一个状态得用二维有序数对表示
-     * */
+     */
     public String longestPalindrome3(String s) {
         //判断特殊情况
         if (s == null || s.length() <= 1) {
@@ -99,7 +99,7 @@ public class Question5 {
         char[] chars = s.toCharArray();
 
         //初始化，一个字符一定是回文
-        for(int i = 0;i < length;i++){
+        for (int i = 0; i < length; i++) {
             table[i][i] = true;
         }
 
@@ -119,7 +119,7 @@ public class Question5 {
                     }
                 }
 
-                if(table[i][j] && j - i + 1 > maxLength){
+                if (table[i][j] && j - i + 1 > maxLength) {
                     begin = i;
                     maxLength = j - i + 1;
                 }
@@ -156,6 +156,35 @@ public class Question5 {
             R++;
         }
         return R - L - 1;
+    }
+
+
+    public String longestPalindrome4(String s) {
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+        String maxStr = "";
+        int length = s.length();
+
+        for (int i = 0; i < length; i++) {
+            String oddStr = expandCenter(s, i, i + 1);
+            String evenStr = expandCenter(s, i, i);
+            maxStr = oddStr.length() > maxStr.length() ? oddStr : maxStr;
+            maxStr = evenStr.length() > maxStr.length() ? evenStr : maxStr;
+        }
+        return maxStr;
+    }
+
+    private String expandCenter(String s, int left, int right) {
+        String result = "";
+        int length = s.length();
+        char[] chars = s.toCharArray();
+        while (left >= 0 && right < s.length() && chars[left] == chars[right]) {
+            result = s.substring(left, right + 1);
+            left--;
+            right++;
+        }
+        return result;
     }
 
 }

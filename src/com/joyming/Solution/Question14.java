@@ -1,7 +1,5 @@
 package com.joyming.Solution;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -106,6 +104,7 @@ public class Question14 {
         return prefix;
     }
 
+
     /**
      * 先排序然后首尾进行比较，找出公共部分就是答案
      * 执行用时：1 ms, 在所有 Java 提交中击败了82.17%的用户
@@ -129,6 +128,54 @@ public class Question14 {
         }
 
         return prefix;
+    }
+
+
+    public static String longestCommonPrefix4(String[] strs) {
+        if (strs == null || strs.length == 0) return "";
+        String prefix = strs[0];
+
+        for (int i = 1; i < strs.length; i++) {
+            prefix = compareWithTwoStr2(prefix, strs[i]);
+        }
+
+        return prefix;
+    }
+
+    public static String compareWithTwoStr(String a, String b) {
+        if (a.length() == 0 || b.length() == 0) {
+            return "";
+        }
+        StringBuilder prefix = new StringBuilder();
+        int left = 0;
+        int right = Math.min(a.length(), b.length());
+
+        char[] as = a.toCharArray();
+        char[] bs = b.toCharArray();
+        int last = 0;
+        while (left < right) {
+            if (as[left] == bs[left] && (last == left || last + 1 == left)) {
+                prefix.append(as[left]);
+                last = left;
+            }
+            left++;
+        }
+        return prefix.toString();
+    }
+
+    public static String compareWithTwoStr2(String a, String b) {
+        if (a.length() == 0 || b.length() == 0) {
+            return "";
+        }
+        int left = 0;
+        int right = Math.min(a.length(), b.length());
+
+        char[] as = a.toCharArray();
+        char[] bs = b.toCharArray();
+        while (left < right && as[left] == bs[left]) {
+            left++;
+        }
+        return a.substring(0, left);
     }
 
 }
