@@ -75,17 +75,22 @@ public class StrStr {
         //构建next数组
         int[] next = buildNext(needle);
 
+        // 指向主串
         int m = haystack.length(), i = 0;
+        // 指向子串
         int n = needle.length(), j = 0;
         while (i < m && j < n) {
+            // j < 0 说明 j==-1要从头开始匹配了
             if (j < 0 || haystack.charAt(i) == needle.charAt(j)) {
                 i++;
                 j++;
             } else {
+                // haystack[i] 和 needle[j]不匹配，要从模式串下标为next[j]的继续匹配，也就是最长公共前缀后缀的长度
                 j = next[j];
             }
         }
 
+        // 如果j == m证明模式串匹配完毕，在主串中找到了模式串，范围模式串在主串中出现的第一个下标，i - j
         if (j == n) {
             answer = i - j;
         }
@@ -95,8 +100,10 @@ public class StrStr {
     private int[] buildNext(String p) {
         int[] next = new int[p.length()];
         int t = -1, j = 0;
+        // 因为第一个字母没有前缀，所以next[0] = -1
         next[0] = -1;
         while (j < p.length() - 1) {
+            // t < 0 也就是 t == -1,要从模式串的第一位开始匹配，然后主串也要向后移一下
             if (t < 0 || p.charAt(t) == p.charAt(j)) {
                 t++;
                 j++;
