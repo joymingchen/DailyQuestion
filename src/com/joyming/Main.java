@@ -2,10 +2,7 @@ package com.joyming;
 
 import com.joyming.Custom.StrStr;
 import com.joyming.Custom.arrayPairSum;
-import com.joyming.Solution.Question1726;
-import com.joyming.Solution.Question209;
-import com.joyming.Solution.Question2530;
-import com.joyming.Solution.Question2652;
+import com.joyming.Solution.*;
 
 public class Main {
 
@@ -25,7 +22,7 @@ public class Main {
         int n = 3;
         System.out.println(test);
 //        System.out.println(Arrays.toString(test));
-        String result = String.valueOf(new Question209().minSubArrayLen(target,nums));
+        String result = String.valueOf(new Question118().generate(target));
         System.out.println(result);
 
         long endTime = System.currentTimeMillis();

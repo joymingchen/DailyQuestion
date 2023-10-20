@@ -43,7 +43,7 @@ public class Question209 {
     //2,3,1,2,4,3
     public int minSubArrayLen(int target, int[] nums) {
         int n = nums.length;
-        int answer = n;
+        int answer = n + 1;
         int sum = 0;
         int left = 0, right = 0;
 
@@ -56,6 +56,6 @@ public class Question209 {
             }
             right++;
         }
-        return answer == n ? 0 : answer;
+        return answer == n + 1 ? 0 : answer;
     }
 }
