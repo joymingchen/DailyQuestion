@@ -77,4 +77,21 @@ public class Question283 {
         nums[j] = temp;
     }
 
+
+    /**
+     * 快慢指针
+     */
+    public void moveZeroes4(int[] nums) {
+        int n = nums.length;
+        if (n < 2) {
+            return;
+        }
+        for (int i = 0, j = 0; j < n; j++) {
+            if (nums[j] != 0) {
+                swap(nums, i, j);
+                i++;
+            }
+        }
+    }
+
 }
