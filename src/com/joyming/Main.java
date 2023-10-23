@@ -22,7 +22,7 @@ public class Main {
         int n = 3;
         System.out.println(test);
 //        System.out.println(Arrays.toString(test));
-        String result = String.valueOf(new Question118().generate(target));
+        String result = String.valueOf(new Question119().getRow(3));
         System.out.println(result);
 
         long endTime = System.currentTimeMillis();
