@@ -1,9 +1,6 @@
 package com.joyming;
 
-import com.joyming.Custom.MovingAverage;
-import com.joyming.Solution.Question2520;
-import com.joyming.Solution.Question622;
-import com.joyming.Solution.Question2698;
+import com.joyming.Solution.Question200;
 import com.joyming.Solution.Question283;
 
 import java.lang.reflect.InvocationTargetException;
@@ -27,14 +24,12 @@ public class Main {
         System.out.println(test);
 //        System.out.println(Arrays.toString(test));
         new Question283().moveZeroes4(nums);
-        String result = String.valueOf(new Question2520().countDigits(n));
+        char[][] grid = new char[][]{{'1', '1', '1', '1', '0'},
+                {'1', '1', '0', '1', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '0', '0', '0'}};
 
-
-        MovingAverage movingAverage = new MovingAverage(3);
-        movingAverage.next(1); // 返回 1.0 = 1 / 1
-        movingAverage.next(10); // 返回 5.5 = (1 + 10) / 2
-        movingAverage.next(3); // 返回 4.66667 = (1 + 10 + 3) / 3
-        movingAverage.next(5); // 返回 6.0 = (10 + 3 + 5) / 3
+        String result = String.valueOf(new Question200().numIslands(grid));
 
         System.out.println(result);
 
