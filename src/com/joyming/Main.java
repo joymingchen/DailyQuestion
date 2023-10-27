@@ -1,6 +1,6 @@
 package com.joyming;
 
-import com.joyming.Solution.Question200;
+import com.joyming.Solution.Question1465;
 import com.joyming.Solution.Question283;
 
 import java.lang.reflect.InvocationTargetException;
@@ -29,7 +29,10 @@ public class Main {
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}};
 
-        String result = String.valueOf(new Question200().numIslands(grid));
+        int h = 5, w = 4;
+        int[] horizontalCuts = new int[]{1, 3};
+        int[] verticalCuts = new int[]{1};
+        String result = String.valueOf(new Question1465().maxArea(h, w, horizontalCuts, verticalCuts));
 
         System.out.println(result);
 
