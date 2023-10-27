@@ -1,7 +1,7 @@
 package com.joyming;
 
-import com.joyming.Solution.Question1465;
 import com.joyming.Solution.Question283;
+import com.joyming.Solution.Question752;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -32,7 +32,7 @@ public class Main {
         int h = 5, w = 4;
         int[] horizontalCuts = new int[]{1, 3};
         int[] verticalCuts = new int[]{1};
-        String result = String.valueOf(new Question1465().maxArea(h, w, horizontalCuts, verticalCuts));
+        String result = String.valueOf(new Question752().openLock(new String[]{"0000"}, "8888"));
 
         System.out.println(result);
 

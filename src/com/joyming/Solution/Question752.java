@@ -1,5 +1,9 @@
 package com.joyming.Solution;
 
+import com.joyming.Data.TreeNode;
+
+import java.util.*;
+
 /**
  * 752.打开转盘锁(Medium)
  * 你有一个带有四个圆形拨轮的转盘锁。每个拨轮都有10个数字： '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' 。每个拨轮可以自由旋转：例如把 '9' 变为 '0'，'0' 变为 '9' 。每次旋转都只能旋转一个拨轮的一位数字。
@@ -45,12 +49,90 @@ package com.joyming.Solution;
  */
 public class Question752 {
 
+    /**
+     * 每一位都可以向上或向下滚动一下，四位密码就是一个八叉树
+     * 利用广度优先算法（BFS）即可
+     */
     public int openLock(String[] deadends, String target) {
-        return 0;
+        String pwdLock = "0000";
+        int step = 0;
+        //转换死亡数字
+        Set<String> deads = new HashSet<>(Arrays.asList(deadends));
+        if (deads.contains(pwdLock)) {
+            return -1;
+        }
+
+        //创建队列
+        Queue<String> queue = new LinkedList<>();
+        queue.add(pwdLock);
+
+        //记录访问过的节点
+        Set<String> visited = new HashSet<>();
+        visited.add(pwdLock);
+
+
+        while (!queue.isEmpty()) {
+
+            int size = queue.size();
+
+            while (size-- > 0) {
+                String cur = queue.poll();
+
+                for (int i = 0; i < cur.length(); i++) {
+
+                    int curNumber = Integer.parseInt(cur.substring(i, i + 1));
+
+                    if (cur.equals(target)) {
+                        return step;
+                    }
+
+                    //向上滑动
+                    int next = curNumber + 1 == 10 ? 0 : curNumber + 1;
+                    String newStr = cur.substring(0, i) + next + cur.substring(i + 1);
+
+                    //向下滑动
+                    int next2 = curNumber - 1 == -1 ? 9 : curNumber - 1;
+                    String newStr2 = cur.substring(0, i) + next2 + cur.substring(i + 1);
+
+
+                    if (!visited.contains(newStr) && !deads.contains(newStr)) {
+                        queue.add(newStr);
+                        visited.add(newStr);
+                    }
+
+                    if (!visited.contains(newStr2) && !deads.contains(newStr2)) {
+                        queue.add(newStr2);
+                        visited.add(newStr2);
+                    }
+                }
+            }
+
+            step++;
+        }
+        return -1;
     }
-    
-    public int minDistance(int num, int target) {
-        int min = num - target;
-        return 0;
+
+
+    /**
+     * 二叉树的BFS 作为参考
+     */
+    public void levelOrder(TreeNode tree) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(tree);
+        int level = 0;//层级
+        while (!queue.isEmpty()) {
+            int size = queue.size();//每一层的节点数
+            for (int i = 0; i < size; i++) {
+                TreeNode treeNode = queue.poll();
+                // treeNode.val
+                if (treeNode.left != null) {
+                    queue.add(treeNode.left);
+                }
+                if (treeNode.right != null) {
+                    queue.add(treeNode.right);
+                }
+            }
+            level++;
+        }
     }
 }
