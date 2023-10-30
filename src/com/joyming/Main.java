@@ -1,9 +1,6 @@
 package com.joyming;
 
-import com.joyming.Solution.Question275;
-import com.joyming.Solution.Question279;
-import com.joyming.Solution.Question283;
-import com.joyming.Solution.Question752;
+import com.joyming.Solution.*;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -30,6 +27,15 @@ public class Main {
                 {'1', '1', '0', '1', '0'},
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}};
+
+        Question155.MinStack minStack = new Question155.MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        minStack.getMin();   //返回 -3.
+        minStack.pop();
+        minStack.top();      //返回 0.
+        minStack.getMin();  //返回 -2.
 
         int h = 5, w = 4;
         int[] horizontalCuts = new int[]{1, 3};
