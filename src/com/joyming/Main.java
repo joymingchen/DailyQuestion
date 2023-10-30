@@ -1,8 +1,9 @@
 package com.joyming;
 
-import com.joyming.Solution.*;
+import com.joyming.Solution.Question739;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 
 public class Main {
 
@@ -16,7 +17,7 @@ public class Main {
 //        String haystack = "aabaaabaaac", needle = "aabaaac";
 //        String haystack = "ACTGPACTGKACTGPACY", needle = "ACTGPACY";
 //        int[] nums = new int[]{881784984,829998714,730002802,56524562,120336848,548306998,801116106,828640251,519131180,819176153,476262254,15904939,540793851,53572296,259044378,491129827,561147559,205793082,967833729};
-        int[] nums = new int[]{0,1,3,5,6};
+        int[] nums = new int[]{73, 74, 75, 71, 69, 72, 76, 73};
         int n = 1248;
         int k = 6;
         int target = 7;
@@ -28,19 +29,10 @@ public class Main {
                 {'1', '1', '0', '0', '0'},
                 {'0', '0', '0', '0', '0'}};
 
-        Question155.MinStack minStack = new Question155.MinStack();
-        minStack.push(-2);
-        minStack.push(0);
-        minStack.push(-3);
-        minStack.getMin();   //返回 -3.
-        minStack.pop();
-        minStack.top();      //返回 0.
-        minStack.getMin();  //返回 -2.
-
         int h = 5, w = 4;
         int[] horizontalCuts = new int[]{1, 3};
         int[] verticalCuts = new int[]{1};
-        String result = String.valueOf(new Question279().numSquares2(12));
+        String result = Arrays.toString(new Question739().dailyTemperatures(nums));
 
         System.out.println(result);
 
