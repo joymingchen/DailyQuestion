@@ -34,7 +34,7 @@ public class Main {
         int h = 5, w = 4;
         int[] horizontalCuts = new int[]{1, 3};
         int[] verticalCuts = new int[]{1};
-        String result = String.valueOf(new Question275().hIndex2(nums));
+        String result = String.valueOf(new Question279().numSquares2(12));
 
         System.out.println(result);
 
