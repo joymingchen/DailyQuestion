@@ -1,5 +1,7 @@
 package com.joyming.Solution;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -34,24 +36,20 @@ import java.util.Stack;
  * 输出: true
  */
 public class Question20 {
+
     public boolean isValid(String s) {
         if (s == null || s.equals("")) {
             return false;
         }
-        int n = s.length();
-        if (n % 2 != 0) {
-            return false;
-        }
-
-        Stack<String> stack = new Stack<>();
+        Deque<Character> stack = new LinkedList<>();
         char[] chars = s.toCharArray();
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < chars.length; i++) {
             String item = String.valueOf(chars[i]);
-            if(item.equals("(") || item.equals("[")||item.equals("{")){
-                stack.push(item);
-            }else {
-                if(!stack.isEmpty()){
-                    if(!isMatch(stack.pop(),item)){
+            if (item.equals("(") || item.equals("[") || item.equals("{")) {
+                stack.push(chars[i]);
+            } else {
+                if (!stack.isEmpty()) {
+                    if(!isMatch(stack.pop().toString(),item)){
                         return false;
                     }
                 }else {
