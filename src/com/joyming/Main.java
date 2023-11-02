@@ -1,5 +1,6 @@
 package com.joyming;
 
+import com.joyming.Solution.Question150;
 import com.joyming.Solution.Question2003;
 import com.joyming.Solution.Question2103;
 import com.joyming.Solution.Question2127;
@@ -25,11 +26,11 @@ public class Main {
         int target = 7;
         System.out.println(test);
 
-        int[] parents = new int[]{-1, 0, 0, 2};
+        String[] parents = new String[]{"4","13","5","/","+"};
 
         String rings = "B0R0G0R9R0B0G0";
 
-        String result = String.valueOf(new Question2103().countPoints(rings));
+        String result = String.valueOf(new Question150().evalRPN(parents));
 
         System.out.println(result);
 
