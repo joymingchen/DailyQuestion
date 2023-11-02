@@ -1,5 +1,8 @@
 package com.joyming.Solution;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 200. 岛屿数量
  * <p>
@@ -44,13 +47,17 @@ public class Question200 {
             for (int j = 0; j < grid[i].length; j++) {
                 if (grid[i][j] == '1') {
                     answer++;
-                    dfs(grid, i, j);
+//                    dfs(grid, i, j);
+                    bfs(grid, i, j);
                 }
             }
         }
         return answer;
     }
 
+    /**
+     * dfs (depth first search) 深度优先搜索
+     */
     private void dfs(char[][] grid, int i, int j) {
         if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == '0') {
             return;
@@ -62,6 +69,53 @@ public class Question200 {
         dfs(grid, i - 1, j);
         dfs(grid, i, j - 1);
         dfs(grid, i, j + 1);
+    }
+
+    /**
+     * bfs（breadth first search） 广度优先搜素
+     */
+    private void bfs(char[][] grid, int x, int y) {
+        //先把当前位置置0
+        grid[x][y] = '0';
+        int m = grid.length;
+        int n = grid[0].length;
+
+        //转化坐标  0 * 4  + 1
+        int cur = x * n + y;
+
+        Queue<Integer> stack = new LinkedList<>();
+        stack.add(cur);
+
+        while (!stack.isEmpty()) {
+            int p = stack.poll();
+
+            int i = p / n;
+            int j = p % n;
+
+            //上边
+            if (i > 0 && grid[i - 1][j] == '1') {
+                grid[i - 1][j] = 0;
+                stack.add((i - 1) * n + j);
+            }
+
+            //下
+            if (i < m - 1 && grid[i + 1][j] == '1') {
+                grid[i + 1][j] = 0;
+                stack.add((i + 1) * n + j);
+            }
+
+            //左
+            if (j > 0 && grid[i][j - 1] == '1') {
+                grid[i][j - 1] = '0';
+                stack.add(i * n + j - 1);
+            }
+
+            //右
+            if (j < n - 1 && grid[i][j + 1] == '1') {
+                grid[i][j + 1] = '0';
+                stack.add(i * n + j + 1);
+            }
+        }
     }
 
 
