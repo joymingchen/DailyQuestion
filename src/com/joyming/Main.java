@@ -1,5 +1,7 @@
 package com.joyming;
 
+import com.joyming.Data.Node;
+import com.joyming.Solution.Question117;
 import com.joyming.Solution.Question200;
 
 import java.lang.reflect.InvocationTargetException;
@@ -31,7 +33,9 @@ public class Main {
                 {'0', '0', '0', '1', '1'}
         };
 
-        String result = String.valueOf(new Question200().numIslands(grid));
+        new Question117().test();
+
+        String result = String.valueOf("new Question117().test()");
 
         System.out.println(result);
 
