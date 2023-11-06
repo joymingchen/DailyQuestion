@@ -3,6 +3,7 @@ package com.joyming;
 import com.joyming.Data.Node;
 import com.joyming.Solution.Question117;
 import com.joyming.Solution.Question200;
+import com.joyming.Solution.Question318;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -24,18 +25,11 @@ public class Main {
         int target = 7;
         System.out.println(test);
 
-        String[] parents = new String[]{"4", "13", "5", "/", "+"};
+        String[] parents = new String[]{"a","ab","abc","d","cd","bcd","abcd"};
 
-        char[][] grid = new char[][]{
-                {'1', '1', '0', '0', '0'},
-                {'1', '1', '0', '0', '0'},
-                {'0', '0', '1', '0', '0'},
-                {'0', '0', '0', '1', '1'}
-        };
 
-        new Question117().test();
 
-        String result = String.valueOf("new Question117().test()");
+        String result = String.valueOf(new Question318().maxProduct(parents));
 
         System.out.println(result);
 
