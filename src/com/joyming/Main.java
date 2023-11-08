@@ -3,6 +3,7 @@ package com.joyming;
 import com.joyming.Data.Node;
 import com.joyming.Solution.Question117;
 import com.joyming.Solution.Question200;
+import com.joyming.Solution.Question2609;
 import com.joyming.Solution.Question318;
 
 import java.lang.reflect.InvocationTargetException;
@@ -29,7 +30,7 @@ public class Main {
 
 
 
-        String result = String.valueOf(new Question318().maxProduct(parents));
+        String result = String.valueOf(new Question2609().findTheLongestBalancedSubstring("01000111"));
 
         System.out.println(result);
 
