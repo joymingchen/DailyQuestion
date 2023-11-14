@@ -1,10 +1,6 @@
 package com.joyming;
 
-import com.joyming.Data.Node;
-import com.joyming.Solution.Question117;
-import com.joyming.Solution.Question200;
-import com.joyming.Solution.Question2609;
-import com.joyming.Solution.Question318;
+import com.joyming.Solution.Question2258;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -26,11 +22,18 @@ public class Main {
         int target = 7;
         System.out.println(test);
 
-        String[] parents = new String[]{"a","ab","abc","d","cd","bcd","abcd"};
+        String[] parents = new String[]{"a", "ab", "abc", "d", "cd", "bcd", "abcd"};
 
+        int[][] grid = new int[][]{{0,2,0,0,1}, {0,2,0,2,2}, {0,2,0,0,0}, {0,0,2,2,0}, {0,0,0,0,0}};
+//        int[][] grid = new int[][]{{0,0,0}, {2,2,0}, {1,2,0}};
+//        int[][] grid = new int[][]{{0,0,0,0}, {0,1,2,0}, {0,2,0,0}};
+//        int[][] grid = new int[][]{{0,2,1,1,0}, {1,2,0,0,1}, {2,2,1,1,0}};
+//        int[][] grid = new int[][]{{0,2,0,0,1}, {0,2,0,2,2}, {0,2,0,0,0}, {0,0,2,2,0}, {0,0,0,0,0}};
+//        int[][] grid = new int[][]{{0,1}, {0,0}};
+//        int[][] grid = new int[][]{{0,0,0,0,0}, {0,2,0,2,0}, {0,2,0,2,0}, {0,2,1,2,0}, {0,2,2,2,0}, {0,0,0,0,0}};
+//        int[][] grid = new int[][]{{0,2,1,0,0,0,0}, {0,2,2,2,2,2,0}, {0,2,0,0,0,0,0}, {0,2,0,2,2,2,2}, {0,2,0,0,0,0,0}, {0,2,2,2,2,2,0}, {0,2,0,0,0,0,0}, {0,2,0,2,2,2,2}, {0,0,0,0,0,0,0}};
 
-
-        String result = String.valueOf(new Question2609().findTheLongestBalancedSubstring("01000111"));
+        String result = String.valueOf(new Question2258().maximumMinutes(grid));
 
         System.out.println(result);
 
