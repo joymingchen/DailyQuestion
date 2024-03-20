@@ -1,9 +1,151 @@
-<mxfile host="app.diagrams.net" modified="2024-03-20T08:13:49.847Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" version="24.0.7" etag="b_zooA4TTa49sEF-UBBv" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-20T09:07:04.729Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="v-S04Wjm-q56eakhF2dD" version="24.0.7" type="github">
   <diagram name="第 1 页" id="4IFaxXavDeUY3zBQ0-TN">
-    <mxGraphModel>
+    <mxGraphModel dx="4780" dy="-2189" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-176" value="Functions" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="5120" width="750" height="1518" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-177" value="Define New URL" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="761" y="5350" width="131" height="131" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-178" value="Define Path URL" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="761" y="5160" width="131" height="131" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-179" value="Define Obs Prefix" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="757.5" y="5538" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-180" value="Check HTTP" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="776.5" y="5747" width="101" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-181" value="Check Is Pic Func" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="755.5" y="5950" width="142" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-182" value="Add Obs Prefix" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="621.5" y="6196" width="122" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-183" value="Check API Path" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="895.5" y="6196" width="122" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-184" value="Add Path URL" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="765.5" y="6379.5" width="113" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-185" value="Add New URL" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1017.5" y="6379.5" width="112" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-187" value="Start" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="992.5" y="4890" width="51" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-188" value="CheckEmpty" style="whiteSpace=wrap;strokeWidth=2;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="966.5" y="5010" width="104" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-189" value="Return" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1223.5" y="5172" width="63" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-190" value="ReturnURL" style="whiteSpace=wrap;strokeWidth=2;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="743.5" y="6594" width="91" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-191" value="Stop" style="ellipse;aspect=fixed;strokeWidth=2;whiteSpace=wrap;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="765.5" y="6678" width="47" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-193" value="Not Empty" style="curved=1;startArrow=none;endArrow=block;exitX=0.5023743872549019;exitY=0.9934129901960784;entryX=0.4963566706730769;entryY=-0.009880514705882353;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-187" target="g4SIPdUjoS-wR-Y_g0hh-188">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-194" value="Empty" style="curved=1;startArrow=none;endArrow=block;exitX=0.9970327524038461;exitY=0.822654534937385;entryX=0.5048053075396826;entryY=0.0008680555555555555;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-188" target="g4SIPdUjoS-wR-Y_g0hh-189">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1255.5" y="5078" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-195" value="Not Empty" style="curved=1;startArrow=none;endArrow=block;exitX=-0.004319411057692308;exitY=0.9037217675036677;entryX=0.5032651479007634;entryY=-0.002564408396946565;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-188" target="g4SIPdUjoS-wR-Y_g0hh-178">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="827.5" y="5078" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-196" value="Define Path URL = https://innovation.huaweiapaas.com/clouddocs/koopage" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-178" target="g4SIPdUjoS-wR-Y_g0hh-177">
+          <mxGeometry x="0.0009" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-197" value="Define New URL = https://innovation.huaweiapaas.com/clouddocs/koopage/api" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;rounded=0;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-177" target="g4SIPdUjoS-wR-Y_g0hh-179">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-198" value="Define Obs Prefix = https://clouddoc-cn-bj4.obs.cn-north-4.myhuaweicloud.com" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-179" target="g4SIPdUjoS-wR-Y_g0hh-180">
+          <mxGeometry x="-0.0009" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-199" value="URL does not start with HTTP" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-180" target="g4SIPdUjoS-wR-Y_g0hh-181">
+          <mxGeometry x="-0.2117" y="2" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-200" value="URL starts with HTTP" style="curved=1;startArrow=none;endArrow=block;exitX=0.0047377784653465345;exitY=0.6252508105081026;entryX=-0.0010946085164835165;entryY=0.27260029267931846;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-180" target="g4SIPdUjoS-wR-Y_g0hh-190">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="498.5" y="5882" />
+              <mxPoint x="498.5" y="6560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-201" value="URL is Pic" style="curved=1;startArrow=none;endArrow=block;exitX=0.0022144586267605635;exitY=0.8576011730685077;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-181" target="g4SIPdUjoS-wR-Y_g0hh-182">
+          <mxGeometry x="-0.0049" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-202" value="URL is not Pic" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=1;entryX=0.5;entryY=0;rounded=0;exitDx=0;exitDy=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-181" target="g4SIPdUjoS-wR-Y_g0hh-183">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-203" value="URL contains /api/" style="curved=1;startArrow=none;endArrow=block;exitX=-0.0005603227459016393;exitY=0.8264301462786031;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-183" target="g4SIPdUjoS-wR-Y_g0hh-184">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-204" value="URL does not contain /api/" style="curved=1;startArrow=none;endArrow=block;exitX=1;exitY=1;entryX=0.5;entryY=0;rounded=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-183" target="g4SIPdUjoS-wR-Y_g0hh-185">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-205" value="Added" style="curved=1;startArrow=none;endArrow=block;exitX=0.5016969774590164;exitY=1.000640368852459;entryX=0.06699866804918421;entryY=0.009880514705882353;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-182" target="g4SIPdUjoS-wR-Y_g0hh-190">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="669.5" y="6560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-206" value="Added" style="curved=1;startArrow=none;endArrow=block;exitX=0.4970443860619469;exitY=1.0029728982300885;entryX=0.6037110833644499;entryY=0.009880514705882353;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-184" target="g4SIPdUjoS-wR-Y_g0hh-190">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="817.5" y="6560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-207" value="Added" style="curved=1;startArrow=none;endArrow=block;exitX=0.5009591238839286;exitY=1.0082659040178572;entryX=1.0002790178571428;entryY=0.23232047178936788;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-185" target="g4SIPdUjoS-wR-Y_g0hh-190">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1037.5" y="6560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g4SIPdUjoS-wR-Y_g0hh-208" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.49959220467032966;exitY=1.0098805147058822;entryX=0.4992104388297872;entryY=0.007147606382978723;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" edge="1" parent="1" source="g4SIPdUjoS-wR-Y_g0hh-190" target="g4SIPdUjoS-wR-Y_g0hh-191">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
